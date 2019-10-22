@@ -13,8 +13,13 @@ func PrintNbrBase(nbr int, base string) {
 	baseC := []rune(base)
 	length := RuneArrayLength(baseC)
 	for i := range baseC {
+		if baseC[i] == '+' || baseC[i] == '-' {
+			z01.PrintRune('N')
+			z01.PrintRune('V')
+			return
+		}
 		for j := i + 1; j < length; j++ {
-			if baseC[j] == '+' || baseC[j] == '-' || baseC[i] == baseC[j] {
+			if baseC[i] == baseC[j] {
 				z01.PrintRune('N')
 				z01.PrintRune('V')
 				return
