@@ -65,6 +65,10 @@ func main() {
 	for range os.Args {
 		length++
 	}
+	if length == 1 {
+		z01.PrintRune(10)
+		return
+	}
 	dif := 0
 	if slice[1] == "--upper" {
 		dif = -32
