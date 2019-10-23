@@ -4,6 +4,10 @@ import "github.com/01-edu/z01"
 
 func PrintNbrBase(nbr int, base string) {
 	var negative bool
+	if base == "0123456789" {
+		PrintNbr(nbr)
+		return
+	}
 	if nbr < 0 {
 		nbr = -nbr
 		negative = true
