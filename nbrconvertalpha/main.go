@@ -61,7 +61,6 @@ func nbrtoalpha(nbr int) rune {
 
 func main() {
 	slice := os.Args
-	start := 1
 	length := 0
 	for range os.Args {
 		length++
@@ -69,9 +68,8 @@ func main() {
 	dif := 0
 	if slice[1] == "--upper" {
 		dif = -32
-		start++
 	}
-	for i := start; i < length; i++ {
+	for i := 1; i < length; i++ {
 		if BasicAtoi(slice[i]) >= 1 && BasicAtoi(slice[i]) <= 26 {
 			z01.PrintRune(nbrtoalpha(BasicAtoi(slice[i]) + dif))
 		} else {
