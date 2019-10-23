@@ -5,7 +5,7 @@ import "github.com/01-edu/z01"
 
 func SortSlice(slice []string, length int) {
 	changed := false
-	for index := 0; index < length-1; index++ {
+	for index := 1; index < length-1; index++ {
 		if slice[index] > slice[index+1] {
 			temp := slice[index]
 			slice[index] = slice[index+1]
