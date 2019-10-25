@@ -49,5 +49,19 @@ func SplitWhiteSpaces(str string) []string {
 			i++
 		}
 	}
-	return result
+	for i := range result {
+		if result[i] == "" {
+			wordnumber--
+		}
+	}
+
+	j := 0
+	answer := make([]string, wordnumber)
+	for i := range result {
+		if result[i] != "" {
+			answer[j] := result[i]
+			j++
+		}
+	}
+	return answer
 }
