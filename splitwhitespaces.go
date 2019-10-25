@@ -11,8 +11,8 @@ func SplitWhiteSpaces(str string) []string {
 	i := 0
 	wordnumber := 1
 	for i < length {
-		if strC[i] == ' ' || strC[i] == '\t' || strC[i] == '\n' {	
-			for j := i+1; j < length; j++ {
+		if strC[i] == ' ' || strC[i] == '\t' || strC[i] == '\n' {
+			for j := i + 1; j < length; j++ {
 				if strC[j] == ' ' || strC[j] == '\t' || strC[j] == '\n' {
 					continue
 				} else {
@@ -26,12 +26,12 @@ func SplitWhiteSpaces(str string) []string {
 	}
 
 	result := make([]string, wordnumber)
-	broken := false;
+	broken := false
 	i = 0
 	for index := range result {
 		for i < length {
-			if strC[i] == ' ' || strC[i] == '\t' || strC[i] == '\n' {	
-				for j := i+1; j < length; j++ {
+			if strC[i] == ' ' || strC[i] == '\t' || strC[i] == '\n' {
+				for j := i + 1; j < length; j++ {
 					if strC[j] == ' ' || strC[j] == '\t' || strC[j] == '\n' {
 						continue
 					} else {
@@ -42,7 +42,7 @@ func SplitWhiteSpaces(str string) []string {
 				}
 			}
 			if broken {
-				broken = false;
+				broken = false
 				break
 			}
 			result[index] += string(strC[i])
